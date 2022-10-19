@@ -14,8 +14,8 @@ import model.Citizen;
  */
 public class Test {
     public static void main(String[] args) {
-        Citizen newctz = new Citizen(2, "01234567890", "Min", 3, "PM", "PM", "HBT", "2002-04-09");
-        CitizenInterface.getInstance().insert(newctz);
+        //Citizen newctz = new Citizen(3, "445566", "Nguyen", 322, "Truong Dinh", "TruongDinh", "HBT", "2008-06-09");
+        //CitizenInterface.getInstance().insert(newctz);
         List<Citizen> list = CitizenInterface.getInstance().show();
     }
 }
