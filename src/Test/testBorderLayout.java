@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Test;
-
-import java.awt.FlowLayout;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -12,26 +12,27 @@ import javax.swing.JFrame;
  *
  * @author nnminh322
  */
-public class GridLayout extends JFrame {
-    public GridLayout(){
+public class testBorderLayout extends JFrame {
+    public testBorderLayout(){
         this.setTitle("Quan ly Dan cu");
         this.setLocationRelativeTo(null);
         this.setSize(600, 400);
-        FlowLayout flowLayout = new FlowLayout();
-        this.setLayout(flowLayout);
+        BorderLayout borderLayout = new BorderLayout();
+        this.setLayout(borderLayout);
         JButton insert = new JButton("Insert");        
         JButton show = new JButton("show");
         JButton delete = new JButton("delete");
-        this.add(insert);
-        this.add(show);
-        this.add(delete);
+        this.add(insert,BorderLayout.NORTH);
+        this.add(show,BorderLayout.EAST);
+        this.add(delete,BorderLayout.CENTER);
+        
 
         this.setVisible(true);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     public static void main(String[] args) {
-        new testview(); 
+        new testBorderLayout(); 
     }
     
 }
