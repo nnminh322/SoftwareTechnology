@@ -16,7 +16,7 @@ public class ConnectionToXampp {
 
     public static Connection getConnection() {
 
-        var url = "jdbc:mysql://localhost:3306/mydatabase";
+        var url = "jdbc:mysql://localhost:3307/mydatabase";
         var user = "root";
         var password = "";
         Connection conn = null;

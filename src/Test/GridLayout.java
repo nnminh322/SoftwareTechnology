@@ -12,8 +12,8 @@ import javax.swing.JFrame;
  *
  * @author nnminh322
  */
-public class testview extends JFrame {
-    public testview(){
+public class GridLayout extends JFrame {
+    public GridLayout(){
         this.setTitle("Quan ly Dan cu");
         this.setLocationRelativeTo(null);
         this.setSize(600, 400);
