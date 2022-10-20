@@ -19,5 +19,6 @@ public class Test {
 //        CitizenInterface.getInstance().insert(newctz);
 //        List<Citizen> list = CitizenInterface.getInstance().show();
           InsertCitizenView insertView = new InsertCitizenView();
+          System.out.println("Da xong InsertView");
     }
 }
