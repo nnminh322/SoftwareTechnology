@@ -16,7 +16,7 @@ public class testGridLayout extends JFrame {
         this.setTitle("Quan ly Dan cu");
         this.setLocationRelativeTo(null);
         this.setSize(600, 400);
-        GridLayout gridLayout = new GridLayout(4,4);
+        GridLayout gridLayout = new GridLayout(5, 1);
         this.setLayout(gridLayout);
 //        JButton insert = new JButton("Insert");        
 //        JButton show = new JButton("show");
@@ -24,7 +24,7 @@ public class testGridLayout extends JFrame {
 //        this.add(insert);
 //        this.add(show);
 //        this.add(delete);
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 5; i++) {
             JButton button = new JButton(i+"");
             this.add(button);
         }
@@ -32,6 +32,7 @@ public class testGridLayout extends JFrame {
         this.setVisible(true);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
     }
     public static void main(String[] args) {
         new testGridLayout(); 

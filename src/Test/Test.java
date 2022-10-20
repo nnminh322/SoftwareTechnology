@@ -7,6 +7,7 @@ package Test;
 import Interface.CitizenInterface;
 import java.util.List;
 import model.Citizen;
+import view.InsertCitizenView;
 
 /**
  *
@@ -14,8 +15,10 @@ import model.Citizen;
  */
 public class Test {
     public static void main(String[] args) {
-        //Citizen newctz = new Citizen(3, "445566", "Nguyen", 322, "Truong Dinh", "TruongDinh", "HBT", "2008-06-09");
-        //CitizenInterface.getInstance().insert(newctz);
-        List<Citizen> list = CitizenInterface.getInstance().show();
+//        Citizen newctz = new Citizen(3, "123456", "ccc", 20, "Ngọc Lập", "Thanh Miện ", "HD", "2000-06-09");
+//        CitizenInterface.getInstance().insert(newctz);
+//        List<Citizen> list = CitizenInterface.getInstance().show();
+          InsertCitizenView insertView = new InsertCitizenView();
+          System.out.println("Da xong InsertView");
     }
 }
