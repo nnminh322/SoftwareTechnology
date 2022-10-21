@@ -6,6 +6,7 @@ package view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
 
 /**
  *
@@ -20,6 +21,16 @@ public class InsertCitizenListener implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("Successfully Inserted!");
+        String src = e.getActionCommand();
+        if (src.equals("Save")) {
+            this.IC.InsertCitizen();
+            System.out.println("Successfully Inserted!");
+            
+        }
+        if (src.equals("Clear")) {
+            this.IC.Clear();
+            System.out.println("Cleared!");
+            
+        }
     }
 }

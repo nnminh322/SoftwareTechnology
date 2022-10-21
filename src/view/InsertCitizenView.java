@@ -27,9 +27,17 @@ import model.Citizen;
  */
 public class InsertCitizenView extends JFrame {
     private Citizen ctzInsert;
-    private JButton save;    
-    private JButton clear;
-    private JButton back;
+    private JButton Save;    
+    private JButton Clear;
+    private JButton Back;
+    private JTextField text1;
+    private JTextField text3;
+    private JTextField text2;
+    private JTextField text4;
+    private JTextField text5;
+    private JTextField text6;
+    private JTextField text7;
+    private JTextField text8;
 
     
     public InsertCitizenView(){
@@ -67,14 +75,14 @@ public class InsertCitizenView extends JFrame {
 
         JPanel jPanel_textfield = new JPanel();
         jPanel_textfield.setLayout(new GridLayout(8,1));
-        JTextField text1 = new JTextField();        
-        JTextField text2 = new JTextField();
-        JTextField text3 = new JTextField();
-        JTextField text4 = new JTextField();
-        JTextField text5 = new JTextField();
-        JTextField text6 = new JTextField();
-        JTextField text7 = new JTextField();
-        JTextField text8 = new JTextField();
+         text1 = new JTextField();        
+         text2 = new JTextField();
+         text3 = new JTextField();
+         text4 = new JTextField();
+         text5 = new JTextField();
+         text6 = new JTextField();
+         text7 = new JTextField();
+         text8 = new JTextField();
         jPanel_textfield.add(text1);
         jPanel_textfield.add(text2);
         jPanel_textfield.add(text3);
@@ -86,13 +94,15 @@ public class InsertCitizenView extends JFrame {
       
         JPanel jPanel_control = new JPanel();
         jPanel_control.setLayout(new FlowLayout());
-        save = new JButton("Save");
-        save.addActionListener(ac);
-        back = new JButton("Back");
-        clear = new JButton("Clear");
-        jPanel_control.add(back);
-        jPanel_control.add(clear);
-        jPanel_control.add(save);
+        Save = new JButton("Save");
+        Save.addActionListener(ac);
+        Back = new JButton("Back");
+        Back.addActionListener(ac);
+        Clear = new JButton("Clear");
+        Clear.addActionListener(ac);
+        jPanel_control.add(Back);
+        jPanel_control.add(Clear);
+        jPanel_control.add(Save);
         
         
         
@@ -100,5 +110,38 @@ public class InsertCitizenView extends JFrame {
         this.add(jPanel_textfield,BorderLayout.CENTER);
         this.add(jPanel_control, BorderLayout.SOUTH);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    
+    public void InsertCitizen(){
+        int HouseHoldBookNumber = Integer.parseInt(text1.getText());
+        String CitizenID = text2.getText();
+        String FullName = text3.getText();
+        int HouseNumber = Integer.parseInt(text4.getText());
+        String Street = text5.getText();
+        String Ward = text6.getText();
+        String District = text7.getText();
+        String DateodBirth = text8.getText();
+        ctzInsert.setHouseHoldBookNumber(HouseHoldBookNumber);
+        ctzInsert.setCitizenID(CitizenID);
+        ctzInsert.setFullName(FullName);
+        ctzInsert.setHouseHoldBookNumber(HouseNumber);
+        ctzInsert.setStreet(Street);
+        ctzInsert.setWard(Ward);
+        ctzInsert.setDistrict(District);
+        ctzInsert.setDateofBirth(DateodBirth);
+//        System.out.println(text1.getText()+text2.getText());
+        ctzInsert.Insert(ctzInsert);
+    }
+    
+    public void Clear(){
+        text1.setText("");
+        text2.setText("");
+        text3.setText("");
+        text4.setText("");
+        text5.setText("");
+        text6.setText("");
+        text7.setText("");
+        text8.setText("");
+
     }
 }

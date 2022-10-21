@@ -4,10 +4,18 @@
  */
 package controller;
 
+import Interface.CitizenInterface;
+import model.Citizen;
+
 /**
  *
  * @author nnminh322
  */
 public class CitizenController {
-    
+
+    public void Insert(int HouseHoldBookNumber, String CitizenID, String FullName, int HouseNumber, String Street, String Ward, String District, String DateofBirth) {
+        Citizen ctz = new Citizen(HouseHoldBookNumber, CitizenID, FullName, HouseNumber, Street, Ward, District, DateofBirth);
+        CitizenInterface.getInstance().insert(ctz);
+        
+    }
 }

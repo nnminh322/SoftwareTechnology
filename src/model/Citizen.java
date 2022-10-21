@@ -4,6 +4,7 @@
  */
 package model;
 
+import Interface.CitizenInterface;
 import java.text.SimpleDateFormat;
 
 /**
@@ -103,6 +104,10 @@ public class Citizen {
     @Override
     public String toString(){
         return "Citizen [HouseHoldBookNumber = " + HouseHoldBookNumber +", CitizenId = "+CitizenID+", FullName = "+ FullName+", HouseNumber = "+ HouseNumber+", Street = "+Street+", Ward = "+Ward +", District = "+District+", DateofBirth = "+ DateofBirth;
+    }
+    
+    public void Insert(Citizen ctz){
+        CitizenInterface.getInstance().insert(ctz);
     }
     
 }
