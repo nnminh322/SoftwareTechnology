@@ -36,7 +36,7 @@ public class Citizen {
     public Citizen(){
         super();
     }
-    
+
     public int getHouseHoldBookNumber() {
         return HouseHoldBookNumber;
     }
@@ -100,6 +100,7 @@ public class Citizen {
     public void setDateofBirth(String DateofBirth) {
         this.DateofBirth = DateofBirth;
     }
+    
     
     @Override
     public String toString(){

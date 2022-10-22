@@ -86,6 +86,7 @@ public class CitizenInterface implements Interface<Citizen> {
             pst.setString(8, t.getDateofBirth());
            
             System.out.println("ban da thuc thi: " + sql);
+            System.out.println(t.getHouseNumber());
 
             result = pst.executeUpdate();
 
