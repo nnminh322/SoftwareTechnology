@@ -85,9 +85,8 @@ public class CitizenInterface implements Interface<Citizen> {
             pst.setString(7, t.getDistrict());
             pst.setString(8, t.getDateofBirth());
            
-            System.out.println("ban da thuc thi: " + sql);
-            System.out.println(t.getHouseNumber());
-
+//            System.out.println("ban da thuc thi: " + sql);
+    
             result = pst.executeUpdate();
 
             constand.ConnectionToXampp.close(conn);

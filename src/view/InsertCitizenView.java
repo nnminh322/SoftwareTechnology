@@ -4,7 +4,7 @@ package view;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
+import controller.InsertCitizenListener;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridBagLayout;
@@ -104,12 +104,10 @@ public class InsertCitizenView extends JFrame {
         jPanel_control.add(Clear);
         jPanel_control.add(Save);
 
-        
-        
         this.add(jPanel_label, BorderLayout.WEST);
         this.add(jPanel_textfield, BorderLayout.CENTER);
         this.add(jPanel_control, BorderLayout.SOUTH);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void InsertCitizen() {
